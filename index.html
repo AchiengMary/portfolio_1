@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mary Achieng | Robotics Engineer</title>
+    <title>Mary Achieng' | Robotics Engineer</title>
     <style>
         * {
             margin: 0;
@@ -19,13 +19,13 @@
         }
 
         header {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
+            background: #f8f9fa;
             padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 2px solid rgba(100, 200, 255, 0.3);
+            border-bottom: 2px solid #e3f2fd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -40,10 +40,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #00d4ff, #7b2ff7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1976d2;
         }
 
         nav ul {
@@ -60,38 +57,35 @@
         }
 
         nav a:hover {
-            color: #00d4ff;
+            color: #1976d2;
         }
 
         .hero {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 6rem 2rem;
+            padding: 4rem 2rem 2rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #00d4ff, #7b2ff7, #ff006e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #1976d2;
             animation: fadeIn 1s ease-in;
         }
 
         .hero .subtitle {
-            font-size: 1.5rem;
-            color: #00d4ff;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            color: #42a5f5;
+            margin-bottom: 1.5rem;
             font-weight: 500;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #555555;
             margin-bottom: 2rem;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -101,225 +95,193 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(45deg, #00d4ff, #7b2ff7);
+            padding: 0.8rem 2rem;
+            background: #1976d2;
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(0, 212, 255, 0.6);
+            box-shadow: 0 6px 25px rgba(25, 118, 210, 0.4);
+            background: #1565c0;
         }
 
         .cta-button.secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid #00d4ff;
+            background: white;
+            color: #1976d2;
+            border: 2px solid #1976d2;
+        }
+
+        .cta-button.secondary:hover {
+            background: #e3f2fd;
         }
 
         section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
         }
 
         h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             text-align: center;
-            color: #00d4ff;
+            color: #1976d2;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: #ffffff;
             border-radius: 15px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(100, 200, 255, 0.2);
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 24px rgba(25, 118, 210, 0.2);
         }
 
         .project-image {
             width: 100%;
-            height: 220px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 240px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 5rem;
         }
 
         .project-content {
-            padding: 1.5rem;
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 0.5rem;
-            color: #00d4ff;
+            color: #1976d2;
+        }
+
+        .project-content .project-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
         .project-content .project-year {
-            color: #7b2ff7;
+            color: #42a5f5;
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .project-content .project-location {
+            color: #666;
+            font-size: 0.9rem;
         }
 
         .project-content p {
-            color: #b0b0b0;
-            margin-bottom: 1rem;
+            color: #555555;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            flex-grow: 1;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 1rem;
+            margin-top: auto;
         }
 
         .tag {
-            background: rgba(0, 212, 255, 0.2);
-            color: #00d4ff;
-            padding: 0.3rem 0.8rem;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.4rem 0.9rem;
             border-radius: 20px;
             font-size: 0.85rem;
-            border: 1px solid rgba(0, 212, 255, 0.3);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .about-text {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(100, 200, 255, 0.2);
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .skills {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.2rem;
-            border-radius: 10px;
-            border-left: 3px solid #00d4ff;
-        }
-
-        .skill-category strong {
-            color: #00d4ff;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlights {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(100, 200, 255, 0.2);
-            margin-bottom: 3rem;
-        }
-
-        .highlights h3 {
-            color: #00d4ff;
-            margin-bottom: 1rem;
-        }
-
-        .highlights ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .highlights li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .highlights li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #7b2ff7;
+            border: 1px solid #bbdefb;
+            font-weight: 500;
         }
 
         .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            justify-content: center;
             gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 2rem auto;
+            flex-wrap: wrap;
         }
 
         .contact-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
             border-radius: 15px;
             text-align: center;
-            border: 1px solid rgba(100, 200, 255, 0.2);
-            transition: transform 0.3s;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 200px;
         }
 
         .contact-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
         }
 
         .contact-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card h3 {
-            color: #00d4ff;
-            font-size: 1.2rem;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
         }
 
+        .contact-card h3 {
+            color: #1976d2;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
         .contact-card a {
-            color: #b0b0b0;
+            color: #555555;
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 0.95rem;
         }
 
         .contact-card a:hover {
-            color: #00d4ff;
+            color: #1976d2;
         }
 
         footer {
-            background: rgba(0, 0, 0, 0.3);
+            background: #f8f9fa;
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
-            border-top: 2px solid rgba(100, 200, 255, 0.3);
+            border-top: 2px solid #e3f2fd;
+        }
+
+        footer p {
+            color: #333333;
         }
 
         @keyframes fadeIn {
@@ -328,11 +290,11 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero .subtitle { font-size: 1.2rem; }
-            .about-content { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1.1rem; }
             nav ul { gap: 1rem; font-size: 0.9rem; }
             .logo { font-size: 1.4rem; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -343,7 +305,6 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -352,99 +313,32 @@
     <section id="home" class="hero">
         <h1>Mary Achieng'</h1>
         <p class="subtitle">Robotics Engineer | Speech & Sound Systems</p>
-        <p>Designing ethical, inclusive, and intelligent robotic systems that understand and respond to people naturally. Bridging robotics, speech technology, and social good with a focus on embedded AI and accessible interfaces in African contexts.</p>
+        <p>Building intelligent robotic systems focused on speech, sound, and human-robot interaction. Passionate about ethical AI and accessible technology in African contexts.</p>
         <div class="cta-buttons">
-            <a href="#projects" class="cta-button">View My Work</a>
+            <a href="#projects" class="cta-button">View Projects</a>
             <a href="https://github.com/AchiengMary" target="_blank" class="cta-button secondary">GitHub</a>
             <a href="https://linkedin.com/in/achieng-mary" target="_blank" class="cta-button secondary">LinkedIn</a>
         </div>
     </section>
 
-    <section>
-        <div class="highlights">
-            <h3>Current Focus</h3>
-            <ul>
-                <li><strong>Inclusive ASR Innovation Sprint 2025 (Kenya)</strong> - Developing speech recognition models for Kenyan English and Swahili with Centre for Digital Language Inclusion (CDLI)</li>
-                <li><strong>Final Year Project</strong> - AI-Based RF Signal Classification using Deep Learning and SDR for robust embedded robotics systems</li>
-                <li><strong>Expected Graduation</strong> - B.Sc. Electrical and Electronics Engineering, Dedan Kimathi University (April 2026)</li>
-            </ul>
-        </div>
-    </section>
-
     <section id="projects">
-        <h2>Featured Projects & Research</h2>
+        <h2>Projects & Research</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🤖</div>
-                <div class="project-content">
-                    <h3>Swarm Robotics with Lightweight AI</h3>
-                    <p class="project-year">2025 | Deep Learning Indaba, Rwanda</p>
-                    <p>Designed compact neural models for multi-robot decision-making in low-resource environments, advancing scalable African robotics innovation.</p>
-                    <div class="tech-tags">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Model Compression</span>
-                        <span class="tag">Multi-Agent Systems</span>
-                        <span class="tag">Swarm Intelligence</span>
-                    </div>
-                </div>
-            </div>
-
             <div class="project-card">
                 <div class="project-image">🔊</div>
                 <div class="project-content">
                     <h3>Inclusive Speech Recognition (ASR)</h3>
-                    <p class="project-year">2025 | CDLI, Senses Hub, Strathmore University</p>
-                    <p>Developing speech recognition models for Kenyan English and Swahili to improve accessibility for users with speech impairments, exploring speech interfaces for robotics.</p>
+                    <div class="project-meta">
+                        <span class="project-year">2025 - Present</span>
+                        <span class="project-location">CDLI, Senses Hub, Strathmore University</span>
+                    </div>
+                    <p>Developing speech recognition models tailored for Kenyan English and Swahili to improve accessibility for users with speech impairments. Collaborating with speech-language pathologists on model fine-tuning and exploring how speech interfaces can enhance robotic and assistive technologies.</p>
                     <div class="tech-tags">
                         <span class="tag">Speech Recognition</span>
                         <span class="tag">TensorFlow</span>
-                        <span class="tag">Accessibility</span>
-                        <span class="tag">HRI</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🛰️</div>
-                <div class="project-content">
-                    <h3>Distributed Multi-Robot Control</h3>
-                    <p class="project-year">2025 | ROSCon Singapore - Speaker</p>
-                    <p>Presented scalable coordination and safety frameworks for autonomous agents using micro-ROS and ESP32, integrating AI safety and human-machine trust.</p>
-                    <div class="tech-tags">
-                        <span class="tag">ROS 2</span>
-                        <span class="tag">micro-ROS</span>
-                        <span class="tag">ESP32</span>
-                        <span class="tag">Fast-DDS</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🌾</div>
-                <div class="project-content">
-                    <h3>Smart Agriculture IoT System</h3>
-                    <p class="project-year">2024 | Rise 4.0 Hackathon - 3rd Place</p>
-                    <p>Developed IoT and robotics-based monitoring system for smallholder farms with explainable and transparent decision support.</p>
-                    <div class="tech-tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Embedded Systems</span>
                         <span class="tag">Python</span>
-                        <span class="tag">Agriculture Tech</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🛰️</div>
-                <div class="project-content">
-                    <h3>Satellite Image Prioritization</h3>
-                    <p class="project-year">2025 | C4DLab, University of Nairobi</p>
-                    <p>Built AI pipelines using VGG16 and XGBoost for environmental data prioritization, aligning technical development with governance and ethical AI.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">VGG16</span>
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">Environmental AI</span>
+                        <span class="tag">Accessibility</span>
+                        <span class="tag">Human-Robot Interaction</span>
                     </div>
                 </div>
             </div>
@@ -453,68 +347,95 @@
                 <div class="project-image">📡</div>
                 <div class="project-content">
                     <h3>AI-Based RF Signal Classification</h3>
-                    <p class="project-year">2025-2026 | Final Year Project (Ongoing)</p>
-                    <p>Investigating robust and secure AI models for RF signal classification using deep learning and SDR for embedded robotics systems.</p>
+                    <div class="project-meta">
+                        <span class="project-year">2025 - 2026</span>
+                        <span class="project-location">Final Year Project - DeKUT</span>
+                    </div>
+                    <p>Investigating robust and secure AI models for RF signal classification using deep learning and Software Defined Radio (SDR). Focus on developing embedded systems solutions for robotics applications with enhanced security and reliability.</p>
                     <div class="tech-tags">
                         <span class="tag">Deep Learning</span>
                         <span class="tag">SDR</span>
                         <span class="tag">GNU Radio</span>
                         <span class="tag">Signal Processing</span>
+                        <span class="tag">Embedded AI</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm a Robotics Engineer passionate about <strong>speech, sound, and human-robot interaction</strong>. I design ethical, inclusive, and intelligent robotic systems that understand and respond to people naturally.</p>
-                
-                <p>My work bridges <strong>robotics, speech technology, and social good</strong>, focusing on embedded AI, accessible interfaces, and trustworthy autonomy in African contexts.</p>
-                
-                <p>I'm currently a final-year student at Dedan Kimathi University of Technology, pursuing a B.Sc. in Electrical and Electronics Engineering (graduating April 2026).</p>
-
-                <h3 style="color: #00d4ff; margin-top: 1.5rem; margin-bottom: 0.5rem;">Awards & Recognition</h3>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li style="padding: 0.3rem 0;">🏆 Scholar – Computational Neuroscience Imbizo 2026, South Africa</li>
-                    <li style="padding: 0.3rem 0;">🎤 ROSCon Scholarship Recipient & Speaker 2025, Singapore</li>
-                    <li style="padding: 0.3rem 0;">📊 Poster Presenter – Deep Learning Indaba 2025, Rwanda</li>
-                    <li style="padding: 0.3rem 0;">🥉 Top 3 – Rise 4.0 Hackathon 2024</li>
-                    <li style="padding: 0.3rem 0;">💡 Innovation Delegate – Kenya Innovation Week 2024</li>
-                    <li style="padding: 0.3rem 0;">🔧 Open-source Contributor – ROS/micro-ROS</li>
-                </ul>
+            <div class="project-card">
+                <div class="project-image">🛰️</div>
+                <div class="project-content">
+                    <h3>Distributed Multi-Robot Control System</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2025</span>
+                        <span class="project-location">ROSCon Singapore - Speaker</span>
+                    </div>
+                    <p>Presented scalable coordination and safety frameworks for autonomous agents using micro-ROS and ESP32. Developed distributed control architecture integrating AI safety principles and human-machine trust for multi-robot systems in resource-constrained environments.</p>
+                    <div class="tech-tags">
+                        <span class="tag">ROS 2</span>
+                        <span class="tag">micro-ROS</span>
+                        <span class="tag">ESP32</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Fast-DDS</span>
+                        <span class="tag">Control Systems</span>
+                    </div>
+                </div>
             </div>
-            
-            <div class="skills">
-                <div class="skill-category">
-                    <strong>Robotics & Control</strong>
-                    ROS 2, micro-ROS, Fast-DDS, Embedded AI, Control Systems
+
+            <div class="project-card">
+                <div class="project-image">🤖</div>
+                <div class="project-content">
+                    <h3>Swarm Robotics with Lightweight AI</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2025</span>
+                        <span class="project-location">Deep Learning Indaba, Rwanda</span>
+                    </div>
+                    <p>Designed compact neural network models for multi-robot decision-making in low-resource environments. Developed model compression techniques and efficient inference strategies to enable swarm intelligence on embedded hardware, advancing scalable African robotics innovation.</p>
+                    <div class="tech-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Model Compression</span>
+                        <span class="tag">Multi-Agent Systems</span>
+                        <span class="tag">Swarm Intelligence</span>
+                        <span class="tag">Embedded AI</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <strong>AI & Machine Learning</strong>
-                    PyTorch, TensorFlow, XGBoost, Speech Recognition, Model Compression
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🛰️</div>
+                <div class="project-content">
+                    <h3>Satellite Image Prioritization System</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2025</span>
+                        <span class="project-location">C4DLab, University of Nairobi</span>
+                    </div>
+                    <p>Built AI pipelines using VGG16 and XGBoost for automated environmental satellite data prioritization. Developed explainable AI models to support decision-making in environmental monitoring, aligning technical development with governance and ethical AI principles.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">VGG16</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Environmental AI</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <strong>Programming Languages</strong>
-                    Python, C++, Bash
-                </div>
-                <div class="skill-category">
-                    <strong>Embedded & Audio Systems</strong>
-                    ESP32, Jetson Nano, GNU Radio, SDR, Audio Signal Processing, Librosa
-                </div>
-                <div class="skill-category">
-                    <strong>Tools & Frameworks</strong>
-                    Git, OpenCV, Audacity
-                </div>
-                <div class="skill-category">
-                    <strong>Focus Areas</strong>
-                    Speech & Sound in Robotics, Human-Robot Interaction, AI Alignment, Inclusive Design
-                </div>
-                <div class="skill-category">
-                    <strong>Soft Skills</strong>
-                    Public Speaking, Interdisciplinary Collaboration, Workshop Facilitation
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🌾</div>
+                <div class="project-content">
+                    <h3>Smart Agriculture IoT System</h3>
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-location">Rise 4.0 Hackathon - 3rd Place</span>
+                    </div>
+                    <p>Developed an IoT and robotics-based monitoring system for smallholder farms featuring real-time environmental sensing, automated alerts, and explainable decision support. Integrated sensors for soil moisture, temperature, and crop health with transparent AI recommendations.</p>
+                    <div class="tech-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Embedded Systems</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Agriculture Tech</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -548,7 +469,7 @@
 
     <footer>
         <p>&copy; 2025 Mary Achieng'. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #7b2ff7;">Speech-driven robotics • Sound perception • Accessible HRI • African soundscapes</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #42a5f5;">Robotics • Speech Technology • Inclusive AI</p>
     </footer>
 
     <script>
