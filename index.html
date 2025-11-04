@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics Portfolio</title>
+    <title>Mary Achieng' | Robotics Engineer</title>
     <style>
         * {
             margin: 0;
@@ -80,10 +80,27 @@
             animation: fadeIn 1s ease-in;
         }
 
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #b0b0b0;
             margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -101,6 +118,11 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 25px rgba(0, 212, 255, 0.6);
+        }
+
+        .cta-button.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #00d4ff;
         }
 
         section {
@@ -155,6 +177,12 @@
             color: #00d4ff;
         }
 
+        .project-content .project-year {
+            color: #7b2ff7;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
         .project-content p {
             color: #b0b0b0;
             margin-bottom: 1rem;
@@ -180,68 +208,110 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            align-items: center;
+            align-items: start;
+        }
+
+        .about-text {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(100, 200, 255, 0.2);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
         }
 
         .skills {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
         }
 
-        .skill-item {
+        .skill-category {
             background: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
+            padding: 1.2rem;
             border-radius: 10px;
             border-left: 3px solid #00d4ff;
         }
 
-        .contact-form {
-            max-width: 600px;
+        .skill-category strong {
+            color: #00d4ff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlights {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            margin-bottom: 3rem;
+        }
+
+        .highlights h3 {
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+
+        .highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlights li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .highlights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #7b2ff7;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #00d4ff;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
+        .contact-card {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(100, 200, 255, 0.3);
-            border-radius: 8px;
-            color: #e0e0e0;
-            font-family: inherit;
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(45deg, #00d4ff, #7b2ff7);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(100, 200, 255, 0.2);
             transition: transform 0.3s;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: #00d4ff;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #00d4ff;
         }
 
         footer {
@@ -259,16 +329,17 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1.2rem; }
             .about-content { grid-template-columns: 1fr; }
-            .skills { grid-template-columns: 1fr; }
-            nav ul { gap: 1rem; }
+            nav ul { gap: 1rem; font-size: 0.9rem; }
+            .logo { font-size: 1.4rem; }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">🤖 RoboPortfolio</div>
+            <div class="logo">Mary Achieng'</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -279,51 +350,116 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>Robotics Engineer</h1>
-        <p>Building intelligent systems that bridge the physical and digital worlds</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+        <h1>Mary Achieng'</h1>
+        <p class="subtitle">Robotics Engineer | Speech & Sound Systems</p>
+        <p>Designing ethical, inclusive, and intelligent robotic systems that understand and respond to people naturally. Bridging robotics, speech technology, and social good with a focus on embedded AI and accessible interfaces in African contexts.</p>
+        <div class="cta-buttons">
+            <a href="#projects" class="cta-button">View My Work</a>
+            <a href="https://github.com/AchiengMary" target="_blank" class="cta-button secondary">GitHub</a>
+            <a href="https://linkedin.com/in/achieng-mary" target="_blank" class="cta-button secondary">LinkedIn</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="highlights">
+            <h3>Current Focus</h3>
+            <ul>
+                <li><strong>Inclusive ASR Innovation Sprint 2025 (Kenya)</strong> - Developing speech recognition models for Kenyan English and Swahili with Centre for Digital Language Inclusion (CDLI)</li>
+                <li><strong>Final Year Project</strong> - AI-Based RF Signal Classification using Deep Learning and SDR for robust embedded robotics systems</li>
+                <li><strong>Expected Graduation</strong> - B.Sc. Electrical and Electronics Engineering, Dedan Kimathi University (April 2026)</li>
+            </ul>
+        </div>
     </section>
 
     <section id="projects">
-        <h2>Featured Projects</h2>
+        <h2>Featured Projects & Research</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🦾</div>
+                <div class="project-image">🤖</div>
                 <div class="project-content">
-                    <h3>Autonomous Mobile Robot</h3>
-                    <p>Developed a fully autonomous navigation system using ROS and computer vision for obstacle avoidance and path planning.</p>
+                    <h3>Swarm Robotics with Lightweight AI</h3>
+                    <p class="project-year">2025 | Deep Learning Indaba, Rwanda</p>
+                    <p>Designed compact neural models for multi-robot decision-making in low-resource environments, advancing scalable African robotics innovation.</p>
                     <div class="tech-tags">
-                        <span class="tag">ROS</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">SLAM</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Model Compression</span>
+                        <span class="tag">Multi-Agent Systems</span>
+                        <span class="tag">Swarm Intelligence</span>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-image">🦿</div>
+                <div class="project-image">🔊</div>
                 <div class="project-content">
-                    <h3>6-DOF Robotic Arm</h3>
-                    <p>Designed and programmed a 6-axis robotic arm with inverse kinematics for precise object manipulation tasks.</p>
+                    <h3>Inclusive Speech Recognition (ASR)</h3>
+                    <p class="project-year">2025 | CDLI, Senses Hub, Strathmore University</p>
+                    <p>Developing speech recognition models for Kenyan English and Swahili to improve accessibility for users with speech impairments, exploring speech interfaces for robotics.</p>
                     <div class="tech-tags">
-                        <span class="tag">Arduino</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Kinematics</span>
-                        <span class="tag">CAD</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">👁️</div>
-                <div class="project-content">
-                    <h3>Vision-Based Sorting System</h3>
-                    <p>Created an AI-powered sorting robot using deep learning for real-time object classification and sorting.</p>
-                    <div class="tech-tags">
+                        <span class="tag">Speech Recognition</span>
                         <span class="tag">TensorFlow</span>
-                        <span class="tag">Raspberry Pi</span>
+                        <span class="tag">Accessibility</span>
+                        <span class="tag">HRI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🛰️</div>
+                <div class="project-content">
+                    <h3>Distributed Multi-Robot Control</h3>
+                    <p class="project-year">2025 | ROSCon Singapore - Speaker</p>
+                    <p>Presented scalable coordination and safety frameworks for autonomous agents using micro-ROS and ESP32, integrating AI safety and human-machine trust.</p>
+                    <div class="tech-tags">
+                        <span class="tag">ROS 2</span>
+                        <span class="tag">micro-ROS</span>
+                        <span class="tag">ESP32</span>
+                        <span class="tag">Fast-DDS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🌾</div>
+                <div class="project-content">
+                    <h3>Smart Agriculture IoT System</h3>
+                    <p class="project-year">2024 | Rise 4.0 Hackathon - 3rd Place</p>
+                    <p>Developed IoT and robotics-based monitoring system for smallholder farms with explainable and transparent decision support.</p>
+                    <div class="tech-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Embedded Systems</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Agriculture Tech</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🛰️</div>
+                <div class="project-content">
+                    <h3>Satellite Image Prioritization</h3>
+                    <p class="project-year">2025 | C4DLab, University of Nairobi</p>
+                    <p>Built AI pipelines using VGG16 and XGBoost for environmental data prioritization, aligning technical development with governance and ethical AI.</p>
+                    <div class="tech-tags">
                         <span class="tag">Computer Vision</span>
+                        <span class="tag">VGG16</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">Environmental AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">📡</div>
+                <div class="project-content">
+                    <h3>AI-Based RF Signal Classification</h3>
+                    <p class="project-year">2025-2026 | Final Year Project (Ongoing)</p>
+                    <p>Investigating robust and secure AI models for RF signal classification using deep learning and SDR for embedded robotics systems.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">SDR</span>
+                        <span class="tag">GNU Radio</span>
+                        <span class="tag">Signal Processing</span>
                     </div>
                 </div>
             </div>
@@ -333,26 +469,52 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <div>
-                <p style="margin-bottom: 1rem;">I'm a passionate robotics engineer with expertise in autonomous systems, computer vision, and mechanical design. I love solving complex problems at the intersection of hardware and software.</p>
-                <p>My goal is to create innovative robotic solutions that make a real-world impact. I'm constantly learning and experimenting with new technologies in AI, control systems, and embedded programming.</p>
+            <div class="about-text">
+                <p>I'm a Robotics Engineer passionate about <strong>speech, sound, and human-robot interaction</strong>. I design ethical, inclusive, and intelligent robotic systems that understand and respond to people naturally.</p>
+                
+                <p>My work bridges <strong>robotics, speech technology, and social good</strong>, focusing on embedded AI, accessible interfaces, and trustworthy autonomy in African contexts.</p>
+                
+                <p>I'm currently a final-year student at Dedan Kimathi University of Technology, pursuing a B.Sc. in Electrical and Electronics Engineering (graduating April 2026).</p>
+
+                <h3 style="color: #00d4ff; margin-top: 1.5rem; margin-bottom: 0.5rem;">Awards & Recognition</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.3rem 0;">🏆 Scholar – Computational Neuroscience Imbizo 2026, South Africa</li>
+                    <li style="padding: 0.3rem 0;">🎤 ROSCon Scholarship Recipient & Speaker 2025, Singapore</li>
+                    <li style="padding: 0.3rem 0;">📊 Poster Presenter – Deep Learning Indaba 2025, Rwanda</li>
+                    <li style="padding: 0.3rem 0;">🥉 Top 3 – Rise 4.0 Hackathon 2024</li>
+                    <li style="padding: 0.3rem 0;">💡 Innovation Delegate – Kenya Innovation Week 2024</li>
+                    <li style="padding: 0.3rem 0;">🔧 Open-source Contributor – ROS/micro-ROS</li>
+                </ul>
             </div>
+            
             <div class="skills">
-                <div class="skill-item">
-                    <strong>Programming</strong><br>
-                    Python, C++, MATLAB
+                <div class="skill-category">
+                    <strong>Robotics & Control</strong>
+                    ROS 2, micro-ROS, Fast-DDS, Embedded AI, Control Systems
                 </div>
-                <div class="skill-item">
-                    <strong>Robotics</strong><br>
-                    ROS, Arduino, Raspberry Pi
+                <div class="skill-category">
+                    <strong>AI & Machine Learning</strong>
+                    PyTorch, TensorFlow, XGBoost, Speech Recognition, Model Compression
                 </div>
-                <div class="skill-item">
-                    <strong>AI/ML</strong><br>
-                    TensorFlow, OpenCV, PyTorch
+                <div class="skill-category">
+                    <strong>Programming Languages</strong>
+                    Python, C++, Bash
                 </div>
-                <div class="skill-item">
-                    <strong>Design</strong><br>
-                    SolidWorks, Fusion 360, CAD
+                <div class="skill-category">
+                    <strong>Embedded & Audio Systems</strong>
+                    ESP32, Jetson Nano, GNU Radio, SDR, Audio Signal Processing, Librosa
+                </div>
+                <div class="skill-category">
+                    <strong>Tools & Frameworks</strong>
+                    Git, OpenCV, Audacity
+                </div>
+                <div class="skill-category">
+                    <strong>Focus Areas</strong>
+                    Speech & Sound in Robotics, Human-Robot Interaction, AI Alignment, Inclusive Design
+                </div>
+                <div class="skill-category">
+                    <strong>Soft Skills</strong>
+                    Public Speaking, Interdisciplinary Collaboration, Workshop Facilitation
                 </div>
             </div>
         </div>
@@ -360,25 +522,33 @@
 
     <section id="contact">
         <h2>Get In Touch</h2>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" required>
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:achieng75mary@gmail.com">achieng75mary@gmail.com</a>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
+            <div class="contact-card">
+                <div class="icon">📱</div>
+                <h3>Phone</h3>
+                <a href="tel:+254714157449">+254 714 157 449</a>
             </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" required></textarea>
+            <div class="contact-card">
+                <div class="icon">💼</div>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/achieng-mary" target="_blank">achieng-mary</a>
             </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+            <div class="contact-card">
+                <div class="icon">💻</div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/AchiengMary" target="_blank">AchiengMary</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Robotics Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Mary Achieng'. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #7b2ff7;">Speech-driven robotics • Sound perception • Accessible HRI • African soundscapes</p>
     </footer>
 
     <script>
@@ -386,17 +556,14 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-
-        function handleSubmit(e) {
-            e.preventDefault();
-            alert('Thanks for reaching out! This is a demo form. In a real site, this would send your message.');
-            e.target.reset();
-        }
     </script>
 </body>
 </html>
